@@ -1,0 +1,76 @@
+:root {
+  --color-primary: #e3350d;
+  --color-primary-dark: #c62828;
+  --color-primary-light: #ff6b4a;
+  --color-background: #f0f4f8;
+  --color-background-gradient-start: #eef2ff;
+  --color-background-gradient-end: #fef3f2;
+  --color-surface: #ffffff;
+  --color-text: #1a1a2e;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-hero-bg: linear-gradient(135deg, #1a1a2e 0%, #2d2d5e 50%, #3d1f4a 100%);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --shadow-card: 0 4px 16px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 12px 32px rgba(15, 23, 42, 0.12);
+  --shadow-panel: 0 8px 24px rgba(15, 23, 42, 0.08);
+  --transition-base: 0.25s ease;
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --stat-hp: #22c55e;
+  --stat-attack: #ef4444;
+  --stat-defense: #3b82f6;
+  --stat-speed: #f59e0b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background: linear-gradient(
+    160deg,
+    var(--color-background-gradient-start) 0%,
+    var(--color-background) 40%,
+    var(--color-background-gradient-end) 100%
+  );
+  background-attachment: fixed;
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
